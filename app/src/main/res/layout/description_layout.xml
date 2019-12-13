@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/imToUrlCh"
-        android:layout_width="143dp"
-        android:layout_height="190dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_marginLeft="0dp"
         android:layout_marginTop="100dp"
         android:layout_marginRight="124dp"
@@ -66,10 +66,7 @@
         android:id="@+id/serie"
         android:layout_width="136dp"
         android:layout_height="49dp"
-        android:layout_marginLeft="300dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
-        android:text="serie"
+   android:text="serie"
         android:textSize="18sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteX="267dp"

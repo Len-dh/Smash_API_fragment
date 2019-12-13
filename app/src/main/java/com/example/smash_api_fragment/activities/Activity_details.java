@@ -32,7 +32,5 @@ public class Activity_details extends Activity {
 
         //actualise la vue en fonction des parametres
         name.setText(item.getName());//affiche le nom de la console
-        //Picasso.get().load(item.getImToUrlCh()).into(imToUrlCh);
-
     }
 }

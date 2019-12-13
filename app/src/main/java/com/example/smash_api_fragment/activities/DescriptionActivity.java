@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.smash_api_fragment.R;
+import com.squareup.picasso.Picasso;
 
 public class DescriptionActivity extends Activity {
 
@@ -36,7 +37,7 @@ public class DescriptionActivity extends Activity {
         tvname = (TextView) findViewById(R.id.name);
         tvname.setText(intent.getStringExtra("namec"));
         imageToUrlCh = (ImageView) findViewById(R.id.imToUrlCh);
-        //Picasso.get().load(imUrl).resize(143,143).into(imageToUrlCh);
+        Picasso.with(getApplicationContext()).load(imUrl).resize(143,143).into(imageToUrlCh);
         tvserie = (TextView) findViewById(R.id.serie);
         tvserie.setText(intent.getStringExtra("serie"));
         tvfirstApp = (TextView) findViewById(R.id.firstApp);
