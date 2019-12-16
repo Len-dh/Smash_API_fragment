@@ -42,7 +42,7 @@ https://github.com/Len-dh/Smash_API_fragment
 
 * SplashScreen affichant une image avec le nom du jeu 
 
-(image)
+<img width="288" alt="Screen Shot 2019-12-16 at 21 27 38" src="https://user-images.githubusercontent.com/43853135/70946676-e2f25f80-2057-11ea-83f7-6945ee448442.png">
 
 ### Frangment home 
 
