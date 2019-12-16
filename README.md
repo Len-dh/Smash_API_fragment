@@ -50,7 +50,8 @@ https://github.com/Len-dh/Smash_API_fragment
   - une image du personnage
   - Le nom du personnage
 
-(image) 
+<img width="295" alt="Screen Shot 2019-12-16 at 21 54 41" src="https://user-images.githubusercontent.com/43853135/70946814-28169180-2058-11ea-97a1-5d73e2efd3a2.png">
+
 
 ### Ecran de détail du personnage 
 
