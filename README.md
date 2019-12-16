@@ -69,7 +69,9 @@ https://github.com/Len-dh/Smash_API_fragment
 
 ### Vidéo Youtube du peronnage
 
-(image) 
+
+<img width="271" alt="Screen Shot 2019-12-16 at 23 07 28" src="https://user-images.githubusercontent.com/43853135/70947330-344f1e80-2059-11ea-93d0-407f233a06c4.png">
+
 
 J'ai rencontré un problème de lecture que je n'ai pas réussi à gérer pour le moment
 
