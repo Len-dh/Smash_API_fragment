@@ -21,11 +21,11 @@ https://github.com/Len-dh/Smash_API_fragment
 
 * Design : 
 
-  - RecycleView et ses éléments`
+  - RecycleView et ses éléments
 
-  - Ecran de détail des personnages`
+  - Ecran de détail des personnages
 
-  - Video Youtube`
+  - Video Youtube
 
 * Architechture MVC 
 
