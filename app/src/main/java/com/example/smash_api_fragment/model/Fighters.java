@@ -5,7 +5,7 @@ import java.io.Serializable;
 public class Fighters implements Serializable {
     private String name;
     private String imageToUrl;
-    private String serie;
+    private String serieToUrl;
     private String firstApp;
     private String descCharac;
     private String imToUrlCh;
@@ -22,7 +22,7 @@ public class Fighters implements Serializable {
     public Fighters(String name, String imageToUrl, String serie, String firstApp, String descCharac, String imToUrlCh, String tiersRanking, String imaGif) {
         this.name = name;
         this.imageToUrl = imageToUrl;
-        this.serie = serie;
+        this.serieToUrl = serie;
         this.firstApp = firstApp;
         this.descCharac = descCharac;
         this.imToUrlCh = imToUrlCh;
@@ -55,11 +55,11 @@ public class Fighters implements Serializable {
     }
 
     public String getSerie() {
-        return serie;
+        return serieToUrl;
     }
 
     public void setSerie(String serie) {
-        this.serie = serie;
+        this.serieToUrl = serie;
     }
 
     public String getFirstApp() {

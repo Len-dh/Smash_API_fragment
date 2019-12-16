@@ -39,7 +39,7 @@ public class DescriptionActivity extends Activity {
         Intent intent = getIntent();
         String name = intent.getStringExtra("name");
         String imUrl = intent.getStringExtra("imch");
-        String serUrl = intent.getStringExtra("serUrl");
+        String serUrl = intent.getStringExtra("serie");
 
         Log.d(TAG, "onCreate: started.");
         tvname = (TextView) findViewById(R.id.name);
