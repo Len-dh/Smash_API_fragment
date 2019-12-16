@@ -6,4 +6,5 @@
     <string name="title_notifications">Notifications</string>
     <string name="recent_news">abc</string>
     <string name="in_news">dfg</string>
+    <string name="title_activity_main">MainActivity</string>
 </resources>

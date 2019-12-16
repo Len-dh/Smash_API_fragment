@@ -1,121 +1,185 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.widget.RelativeLayout
+<android.support.design.widget.CoordinatorLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:id="@+id/coordinator">
 
-    <ImageView
-        android:id="@+id/imToUrlCh"
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="0dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginRight="124dp"
-        android:layout_marginBottom="20dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/loading_shape"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="130dp" />
+        android:layout_height="wrap_content"
+        android:id="@+id/appBarLayout"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="20dp"
-        android:text="Série d'origine : "
-        android:textSize="18sp"
-        android:textStyle="bold"/>
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_scrollFlags="scroll|snap|exitUntilCollapsed"
+            app:contentScrim="@color/colorPrimary"
+            >
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="145dp"
-        android:layout_marginBottom="20dp"
-        android:text="Première Apparition : "
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <ImageView
+                android:id="@+id/imToUrlCh"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading_shape"
+                tools:layout_editor_absoluteX="0dp"
+                tools:layout_editor_absoluteY="130dp"
+                android:layout_gravity="center_horizontal"/>
 
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="210dp"
-        android:layout_marginBottom="20dp"
-        android:text="Classement au tiers compétition : "
-        android:textSize="18sp"
-        android:textStyle="bold"/>
-
-    <TextView
-        android:id="@+id/name"
-        android:layout_width="178dp"
-        android:layout_height="40dp"
-        android:layout_marginRight="124dp"
-        android:layout_marginLeft="124dp"
-        android:layout_marginTop="59dp"
-        android:layout_marginBottom="20dp"
-        android:text="NomDuPersonnage"
-        android:textSize="18sp"
-        android:textStyle="bold" />
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="80dp"
+                android:text="NomDuPersonnage"
+                android:textSize="18sp"
+                android:textStyle="bold" />
 
 
-    <TextView
-        android:id="@+id/serie"
-        android:layout_width="136dp"
-        android:layout_height="49dp"
-   android:text="serie"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="267dp"
-        tools:layout_editor_absoluteY="128dp" />
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Dark"/>
 
-    <TextView
-        android:id="@+id/firstApp"
-        android:layout_width="138dp"
-        android:layout_height="53dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="163dp"
-        android:layout_marginBottom="20dp"
-        android:text="firstapp"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="177dp" />
 
-    <TextView
-        android:id="@+id/descCharac"
-        android:layout_width="366dp"
-        android:layout_height="246dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginBottom="4dp"
-        android:text="descch"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="356dp" />
+        </android.support.design.widget.CollapsingToolbarLayout>
 
-    <TextView
-        android:id="@+id/tiersRanking"
-        android:layout_width="138dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="150dp"
-        android:layout_marginTop="260dp"
-        android:layout_marginBottom="20dp"
-        android:text="tiers"
-        android:textSize="18sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteX="265dp"
-        tools:layout_editor_absoluteY="240dp" />
 
-    <Button
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.design.widget.FloatingActionButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="smash_layout"
-        android:text="Samsh Ultime" />
+        android:tint="@android:color/white"
+        app:layout_anchor="@id/appBarLayout"
+        app:layout_anchorGravity="bottom|right|end"
+        android:layout_marginEnd="32dp"
+        android:onClick="Popup"
+        />
 
-</android.widget.RelativeLayout>
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="60dp"
+                android:layout_marginLeft="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Série d'origine : "
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="120dp"
+                android:layout_marginLeft="10dp"
+                android:text="Première Apparition : "
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="180dp"
+                android:layout_marginLeft="10dp"
+                android:text="Classement au tiers compétition : "
+                android:textSize="18sp"
+                android:textStyle="bold"/>
+
+
+
+            <ImageView
+                android:id="@+id/serieToUrl"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="90dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading_shape"
+                />
+
+            <TextView
+                android:id="@+id/firstApp"
+                android:layout_width="126dp"
+                android:layout_height="53dp"
+                android:layout_marginTop="136dp"
+                android:layout_marginLeft="10dp"
+                android:text="firstapp"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="177dp" />
+
+
+
+            <TextView
+                android:id="@+id/tiersRanking"
+                android:layout_width="138dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="200dp"
+                android:layout_marginLeft="10dp"
+                android:text="tiers"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                tools:layout_editor_absoluteX="265dp"
+                tools:layout_editor_absoluteY="240dp" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="smash_layout"
+                android:text="Samsh Ultime" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="250dp"
+                android:layout_marginRight="10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/descCharac"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="descch"
+                        android:textSize="18sp"
+                        android:textStyle="bold"
+                        tools:layout_editor_absoluteX="16dp"
+                        tools:layout_editor_absoluteY="356dp" />
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+
+
+
+
+        </RelativeLayout>
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+</android.support.design.widget.CoordinatorLayout>

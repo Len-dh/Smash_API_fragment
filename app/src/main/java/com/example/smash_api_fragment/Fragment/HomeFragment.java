@@ -32,7 +32,7 @@ public class HomeFragment extends Fragment {
         controller = new MainController(this);
         controller.onCreate();
 
-    return v;
+        return v;
     }
 
     public void showList(List<Fighters> list) {
